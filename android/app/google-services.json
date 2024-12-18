@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "560125531834",
+    "project_id": "xgym-51d57",
+    "storage_bucket": "xgym-51d57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560125531834:android:9654f3f00ed8d7954ed483",
+        "android_client_info": {
+          "package_name": "com.xadaptorgym.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560125531834-e9uia50je0qve3hkfebodti0gb79u8j4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xadaptorgym.com",
+            "certificate_hash": "e5339c88613e8b9e862006dff97de13cc421a5bc"
+          }
+        },
+        {
+          "client_id": "560125531834-vvqhrjj3t8iqvj64t3m2ku3dhphjd0qt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqUqqw7Vyn7QgABBcKhhfLwQCNnX-IOd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560125531834-vvqhrjj3t8iqvj64t3m2ku3dhphjd0qt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

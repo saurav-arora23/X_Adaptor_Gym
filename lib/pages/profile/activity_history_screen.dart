@@ -98,7 +98,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         .doc(userId)
         .collection('workout_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           likedPost.add(WorkoutModel(
@@ -118,7 +118,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         .doc(userId)
         .collection('progress_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           allWorkout.add(WorkoutModel(

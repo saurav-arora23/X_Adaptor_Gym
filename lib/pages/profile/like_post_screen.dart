@@ -35,7 +35,7 @@ class _LikePostScreenState extends State<LikePostScreen> {
         .collection('workout_data')
         .get();
 
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           likedPost.add(WorkoutModel(

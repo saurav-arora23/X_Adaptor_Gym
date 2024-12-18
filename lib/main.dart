@@ -163,7 +163,7 @@ class _MyAppState extends State<MyApp> {
     debugPrint("deviceToken-- $firebaseToken");
     DocumentSnapshot snapshot =
         await FirebaseFirestore.instance.collection('users').doc(userId).get();
-    if (snapshot != null) {
+    if (snapshot.toString().isNotEmpty) {
       not = snapshot.get('notification');
     }
     debugPrint('Notification is -- $not');

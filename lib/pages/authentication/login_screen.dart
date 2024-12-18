@@ -46,7 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
       });
       DocumentSnapshot<Map<String, dynamic>> snapshot =
           await FirebaseFirestore.instance.collection('users').doc(token).get();
-
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

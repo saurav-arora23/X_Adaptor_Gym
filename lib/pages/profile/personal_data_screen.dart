@@ -37,7 +37,7 @@ class _PersonalDataScreenState extends State<PersonalDataScreen> {
   getData() async {
     DocumentSnapshot<Map<String, dynamic>> snapShotData =
         await FirebaseFirestore.instance.collection('users').doc(userId).get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       setState(() {
         name = snapShotData.get("username");
         email = snapShotData.get("email");

@@ -154,7 +154,7 @@ class _SeeAllScreenState extends State<SeeAllScreen> {
         .doc('beginner')
         .collection('beginner_posts')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           beginner.add(WorkoutModel(
@@ -182,7 +182,7 @@ class _SeeAllScreenState extends State<SeeAllScreen> {
         .doc('intermediate')
         .collection('intermediate_posts')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           intermediate.add(WorkoutModel(
@@ -210,7 +210,7 @@ class _SeeAllScreenState extends State<SeeAllScreen> {
         .doc('advance')
         .collection('advance_posts')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           advance.add(WorkoutModel(
@@ -238,7 +238,7 @@ class _SeeAllScreenState extends State<SeeAllScreen> {
         .doc(userId)
         .collection('workout_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           likedPost.add(WorkoutModel(

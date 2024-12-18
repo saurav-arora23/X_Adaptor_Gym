@@ -277,6 +277,12 @@ class _SignupScreenState extends State<SignupScreen> {
             TextButton(
               onPressed: () async {
                 try {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
                   final credential = await FirebaseAuth.instance
                       .createUserWithEmailAndPassword(
                     email: emailController.text,
@@ -296,12 +302,6 @@ class _SignupScreenState extends State<SignupScreen> {
                     'height': null,
                     'weight': null,
                   });
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LoginScreen(),
-                    ),
-                  );
                 } on FirebaseAuthException catch (e) {
                   if (e.code == 'weak-password') {
                     debugPrint('The password provided is too weak.');
@@ -309,7 +309,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     debugPrint('The account already exists for that email.');
                   }
                 } catch (e) {
-                  print(e);
+                  debugPrint(e.toString());
                 }
               },
               child: Container(
@@ -356,7 +356,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   }
                 } on Exception catch (e) {
                   // TODO
-                  print('exception->$e');
+                  debugPrint('exception->$e');
                 }
                 Navigator.pushReplacement(
                   context,

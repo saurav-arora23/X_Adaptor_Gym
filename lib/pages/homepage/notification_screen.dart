@@ -34,7 +34,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         .doc(userId)
         .collection('notification_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           notification.add(snapShotData.docs[i]);

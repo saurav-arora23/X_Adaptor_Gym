@@ -97,7 +97,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
         .doc(userId)
         .collection('workout_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           sched.add(WorkoutModel(

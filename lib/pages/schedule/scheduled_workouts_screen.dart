@@ -37,7 +37,7 @@ class _ScheduledWorkoutsScreenState extends State<ScheduledWorkoutsScreen> {
         .doc(userId)
         .collection('workout_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         setState(() {
           likedPost.add(WorkoutModel(
@@ -56,7 +56,7 @@ class _ScheduledWorkoutsScreenState extends State<ScheduledWorkoutsScreen> {
         .doc(userId)
         .collection('workout_data')
         .get();
-    if (snapShotData != null) {
+    if (snapShotData.toString().isNotEmpty) {
       for (int i = 0; i < snapShotData.docs.length; i++) {
         if (DateTime.parse(snapShotData.docs[i].get('schedule_DateTime'))
             .isAfter(DateTime.now())) {
